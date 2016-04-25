@@ -1,0 +1,14 @@
+#fondban {
+   width: 99%;
+   height: 360px;
+   background-image: linear-gradient(to left, #F6CEF5, #E3CEF6, #E0F2F7, #CEF6EC, #F5F6CE, #F5D0A9);
+   border-radius: 10px;
+}
+#idpwd {
+   text-align: center;
+   margin-top: 20px;
+}
+body{
+	background-image: linear-gradient(to left, #F6CEF5, #E3CEF6, #E0F2F7, #CEF6EC, #F5F6CE, #F5D0A9);
+   border-radius: 10px;
+}
