@@ -42,7 +42,6 @@ if (isset($_POST['connexion']) && $_POST['connexion'] == 'Connexion') {
 <title>Camagru</title>
 </head>
 <body>
-
 <div id="fondban">
 <div id="idpwd">
 <fieldset>
