@@ -36,11 +36,20 @@ if (isset($_POST['connexion']) && $_POST['connexion'] == 'Connexion') {
 }
 ?>
 
+<!DOCTYPE HTML5>
 <html>
-<link rel="stylesheet" type="text/css" href="css/css-compte.css">
 <head>
+<meta charset="utf-8" />
 <title>Camagru</title>
+<link rel="stylesheet" type="text/css" href="css/css-compte.css" media="all">
 </head>
+<body onload="init();">
+<div id="insta"><img src="./img/instaa.png" width="90" height="90"/></div>
+	<header>
+  
+  <h1>CAMaGRU</h1>
+
+  	</header>
 <body>
 <div id="fondban">
 <div id="idpwd">

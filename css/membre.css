@@ -3,8 +3,11 @@ body {
 }
 h1 {
 	text-align: center;
-	color: grey;
+	background: -webkit-gradient(linear, left top, left bottom, from(black), to(pink));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 	font-family: 'Lucida Caligraphy', 'Monotype Corsiva', cursive;
+	position: relative;
 }
 
 header
@@ -23,3 +26,168 @@ header
   	border-radius: 20px;
   	width: 99%;
  }
+/* FIN TRUC BASIC*/
+
+
+
+
+/* DEBUT MENU DEROULANT */
+#menu-demo2, #menu-demo2 ul{
+	padding:0;
+	margin:0;
+	list-style:none;
+    text-align:center;
+}
+#menu-demo2 li{
+	display:inline-block;
+	position:relative;
+	border-radius:8px 8px 0 0;
+}
+#menu-demo2 ul li{
+	display:inherit;
+	border-radius:0;
+}
+#menu-demo2 ul li:hover{
+	border-radius:0;
+}
+#menu-demo2 ul li:last-child{
+	border-radius:0 0 8px 8px;
+}
+#menu-demo2 ul{
+	position:absolute;
+	max-height:0;
+	left: 0;
+	right: 0;
+	overflow:hidden;
+    -moz-transition: .8s all .3s;
+    -webkit-transition: .8s all .3s;
+	transition: .8s all .3s;
+}
+#menu-demo2 li:hover ul{
+	max-height:15em;
+}
+
+				/* background des liens menus */
+#menu-demo2 li:first-child{
+	background-image:linear-gradient(to bottom, #ffffff 0%, #EAC7E2 100%);
+}
+#menu-demo2 li:nth-child(2){
+	background-image:linear-gradient(to bottom, #ffffff 0%, #ABD4F9 100%);
+}
+#menu-demo2 li:nth-child(3){
+	background-image:linear-gradient(to bottom, #ffffff 0%, #D6BAEC 100%);
+}
+#menu-demo2 li:last-child{
+	background-image:linear-gradient(to bottom, #ffffff 0%, #D6BAEC 100%);
+}
+				/* background des liens sous menus */
+#menu-demo2 li:first-child li{
+	background:#EAC7E2;
+}
+#menu-demo2 li:nth-child(2) li{
+	background:#ABD4F9;
+}
+#menu-demo2 li:nth-child(3) li{
+	background:#D6BAEC;
+}
+#menu-demo2 li:last-child li{
+	background:#D6BAEC;
+}
+				/* background des liens menus et sous menus au survol */
+#menu-demo2 li:first-child:hover, #menu-demo2 li:first-child li:hover{
+	background-image:linear-gradient(to bottom, #ffffff 0%, #EAC7E2 100%);
+}
+#menu-demo2 li:nth-child(2):hover, #menu-demo2 li:nth-child(2) li:hover{
+	background-image:linear-gradient(to bottom, #ffffff 0%, #ABD4F9 100%);
+}
+#menu-demo2 li:nth-child(3):hover, #menu-demo2 li:nth-child(3) li:hover{
+	background-image:linear-gradient(to bottom, #ffffff 0%, #D6BAEC 100%);
+}
+#menu-demo2 li:last-child:hover, #menu-demo2 li:last-child li:hover{
+	background-image:linear-gradient(to bottom, #ffffff 0%, #D6BAEC 100%);
+}
+				/* les a href */
+#menu-demo2 a{
+	text-decoration:none;
+	display:block;
+	padding:8px 32px;
+	color:#83908D;
+	font-family:arial;
+}
+#menu-demo2 ul a{
+	padding:8px 0;
+
+}
+#menu-demo2 li:hover li a{
+	color:#83908D;
+	text-transform:inherit;
+
+}
+#menu-demo2 li:hover a, #menu-demo2 li li:hover a{
+color:#4C4B4D;
+}
+/* FIN MENU DEROULANT */
+
+
+
+
+
+
+/* DEBUT FOOTER */
+
+#footim img{
+position: absolute;
+display: block;
+overflow: hidden;
+margin-left: 90%;
+bottom: 25px;
+right: 0px;
+width: 100px ;
+height: 90px
+}
+ 
+#footim img:hover{
+right: 90%;
+transition-duration: 5s;
+}
+
+#foot {
+position: absolute;
+margin-left: 90%;
+bottom: 0px;
+right: 10px;
+color: #EA5EB7;
+font-family: 'Lucida Caligraphy', 'Monotype Corsiva', cursive;
+}
+/* FIN FOOTER */ 
+
+
+
+/*POSITION PHOTO*/
+
+@media screen and (max-width : 800){
+	.liveVideo{
+		width : 50%;
+		height: 50%;
+	}
+}
+@media screen and (max-width: 700px){
+	.GalerieImg{
+		height : 150px;
+		width : 90px;
+}
+}
+@media screen and (max-width: 1925px)
+{
+	.choiseclip{
+		position:relative;
+		display:inline;
+		width : 50%;
+		margin:none;
+		margin-top:20px;
+		padding:none;
+		overflow : auto;
+		float : left;
+		height : 300px;
+}
+/* FIN POSITION PHOTO*/

@@ -1,14 +1,25 @@
-#fondban {
-   width: 99%;
-   height: 360px;
-   background-image: linear-gradient(to left, #F6CEF5, #E3CEF6, #E0F2F7, #CEF6EC, #F5F6CE, #F5D0A9);
-   border-radius: 10px;
+body {
+	background-image: linear-gradient(to bottom, #F8E0E0, #F8ECE0, #E0F8E6, #E0F8F7, #E0E6F8, #ECE0F8, #F8E0F1, #F8E0E6);
 }
-#idpwd {
-   text-align: center;
-   margin-top: 20px;
+h1 {
+	text-align: center;
+	color: grey;
+	font-family: 'Lucida Caligraphy', 'Monotype Corsiva', cursive;
 }
-body{
-	background-image: linear-gradient(to left, #F6CEF5, #E3CEF6, #E0F2F7, #CEF6EC, #F5F6CE, #F5D0A9);
-   border-radius: 10px;
+
+header
+{
+ 	width: 99%;
+	margin-top: -50px;
+	background-image: linear-gradient(to left, #F8E0E0, #F8ECE0, #E0F8E6, #E0F8F7, #E0E6F8, #ECE0F8, #F8E0F1, #F8E0E6);
+	border-radius: 20px;
 }
+ 
+#insta
+{
+  	background-image: linear-gradient(to left, #F8E0E0, #F8ECE0, #E0F8E6, #E0F8F7, #E0E6F8, #ECE0F8, #F8E0F1, #F8E0E6);
+  	z-index: 9;
+  	text-align: center;
+  	border-radius: 20px;
+  	width: 99%;
+ }

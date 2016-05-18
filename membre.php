@@ -13,82 +13,72 @@
 <title>Camagru</title>
 <link rel="stylesheet" type="text/css" href="css/membre.css" media="all">
 </head>
+
 <body onload="init();">
 <div id="insta"><img src="./img/instaa.png" width="90" height="90"/></div>
 	<header>
-  
   <h1>CAMaGRU</h1>
 
-  	</header>
-<a href="deconnexion.php">Déconnexion</a>
+
+    <ul id="menu-demo2">
+  <div id="test7">
+  <li><a href="#">Mon compte</a>
+    <ul>
+      <li><a href="modif-compt.php">Profil</a></li>
+      <li><a href="deconnexion.php">Déconnexion</a></li>
+    </ul>
+  </li>
+
+  <li><a href="/client/views/galerie.php">Galerie Photo</a>
+    
+    <ul>
+      <li><a href="/client/views/galerie.php">Mes photos</a></li>
+    </ul>
+  </li>
+  <li><a href="upload.php">Telecharger une photo</a>
+
+  </li>
+</ul>
+  </header>
+
 <video id="video" class="liveVideo" autoplay></video>
 <button id="startbutton">Prendre une photo</button>
 <canvas id="canvas"></canvas>
 
+
+<script src="./client/take_picture.js"></script>
+<script src="/client/scripts/addclip.js"></script>
+
+<footer>
+
+
+
+<a href="#" id="./img/hippo" onclick="afficherImage(this.id)"><button id="startbutton">pouet</button></a>
+
+    <div id='affichageImage'></div>
+
+
 <script type="text/javascript">
-	(function() {
+  function afficherImage( id)
+        {
+          var divImage = document.getElementById('affichageImage');
+          
+          if (divImage.hasChildNodes()){
+            divImage.removeChild(node);
+          }
+          
+          var hrefImg = id +".png";
+          node = document.createElement('img');
+          node.id = id + "Image";
+          node.src = hrefImg;
+          node.alt = id;
 
-  var streaming = false,
-      video        = document.querySelector('#video'),
-      cover        = document.querySelector('#cover'),
-      canvas       = document.querySelector('#canvas'),
-      photo        = document.querySelector('#photo'),
-      startbutton  = document.querySelector('#startbutton'),
-      width = 320,
-      height = 0;
-
-  navigator.getMedia = ( navigator.getUserMedia ||
-                         navigator.webkitGetUserMedia ||
-                         navigator.mozGetUserMedia ||
-                         navigator.msGetUserMedia);
-
-  navigator.getMedia(
-    {
-      video: true,
-      audio: false
-    },
-    function(stream) {
-      if (navigator.mozGetUserMedia) {
-        video.mozSrcObject = stream;
-      } else {
-        var vendorURL = window.URL || window.webkitURL;
-        video.src = vendorURL.createObjectURL(stream);
-      }
-      video.play();
-    },
-    function(err) {
-      console.log("An error occured! " + err);
-    }
-  );
-
-  video.addEventListener('canplay', function(ev){
-    if (!streaming) {
-      height = video.videoHeight / (video.videoWidth/width);
-      video.setAttribute('width', width);
-      video.setAttribute('height', height);
-      canvas.setAttribute('width', width);
-      canvas.setAttribute('height', height);
-      streaming = true;
-    }
-  }, false);
-
-  function takepicture() {
-    canvas.width = width;
-    canvas.height = height;
-    canvas.getContext('2d').drawImage(video, 0, 0, width, height);
-    var data = canvas.toDataURL('image/png');
-    photo.setAttribute('src', data);
-  }
-
-  startbutton.addEventListener('click', function(ev){
-      takepicture();
-    ev.preventDefault();
-  }, false);
-
-})();
+          divImage.appendChild(node);
+        }
 </script>
 
-<a href="upload.php">Telecharger une photo</a>
-
+<div id="footim"> <img src="./img/logo.png"/></div>
+<div id="foot"> <p> Tii_Chaton.&copy;</p> </div>
+</footer>
 </body>
 </html>
