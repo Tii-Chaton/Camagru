@@ -1,0 +1,51 @@
+
+$colors: ( #E31D28, #ED8C3D, #FCD234, #3E9965, #295167, #492245, $background);
+$arc-width: 35px;
+$arc-delay: 0.2s;
+$animation-duration: $arc-delay * length($colors);
+$rainbow-radius: $arc-width * length($colors);
+$rainbow-diameter: $rainbow-radius * 2;
+.arc {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	border-radius: 50%;
+	animation: spin ease $animation-duration infinite both;
+	@for $i from 1 through length($colors) {
+		&:nth-child(#{$i}) {
+			$radius: (length($colors) - $i + 1) * $arc-width;
+			$diameter: $radius * 2;
+			$delay: (length($colors) - $i) * $arc-delay;
+			background: nth($colors, $i);
+			width: $diameter;
+			height: $diameter;
+			margin-left: -$radius;
+			margin-top: -$radius;
+			clip-path: inset(50% 0 0 0);
+			animation-delay: $delay;
+		}
+	}
+}
+
+#rainbow {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: $rainbow-diameter;
+	height: $rainbow-diameter;
+}
+
+@keyframes spin {
+	from {
+		transform: rotateZ(0deg);
+	}
+	to {
+		transform: rotateZ(360deg);
+	}
+}
+
+body {
+	background: $background;
+	overflow: hidden;
+}

@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8" />
 <title>Inscription</title>
-<link rel="stylesheet" type="text/css" href="css/membre.css" media="all">
+<link rel="stylesheet" type="text/css" href="./client/css/membre.css" media="all">
 </head>
 <body onload="init();">
-<div id="insta"><img src="./img/instaa.png" width="90" height="90"/></div>
+<div id="insta"><img src="./client/images/instaa.png" width="90" height="90"/></div>
 	<header>
   <h1>CAMaGRU</h1>
     <ul id="menu-demo2">
   <div id="test7">
-    <li><a href="membre.php">Accueil</a>
+    <li><a href="/">Accueil</a>
   </li>
   <li><a href="">Mon compte</a>
     <ul>
@@ -34,13 +34,8 @@
 <fieldset>
 <legend>Modifier mes informations personelle:</legend></br>
 
-	Login : <input name="login" type="text" disabled="disabled" value="<?=$modif['login']?>"/><br />
-    Ancien mot de passe : <input id="oldpw" size="16" name="oldpw" type="password" value=""/><br />
-    Nouveau mot de passe : <input id="newpw" size="16" name="newpw" type="password" value=""/><br />
-    Confirmer le mot de passe : <input id="confpw" size="16" name="confpw" type="password" value=""/><br />
-    E-mail : <input name="mail" type="text" value="<?=$modif['mel']?>" size="32" /><br />
-    Adresse : <input name="adresse" type="text" value="<?=$modif['adresse']?>" size="32" /><br />
-    <a href="delete_account.php">Supprimer le compte</a><br />
+    <a href="client/views/resetpassword.php">Changer mdp</a><br />
+    <a href="server/delete_account.php">Supprimer le compte</a><br />
     <br />
     <br />
     <input type="submit" id="valider" name="valider" value="VALIDER">
@@ -51,6 +46,10 @@
 if (isset($erreur)) echo '<br />',$erreur;
 ?>
 </body>
+<footer>
+<div id="footim"> <img src="./client/images/logo.png"/></div>
+<div id="foot"> <p> Tii_Chaton.&copy;</p> </div>
+</footer>
 </html>
 
 

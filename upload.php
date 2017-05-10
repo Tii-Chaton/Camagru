@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8" />
 <title>Camagru</title>
-<link rel="stylesheet" type="text/css" href="css/membre.css" media="all">
+<link rel="stylesheet" type="text/css" href="./client/css/membre.css" media="all">
 </head>
 <body onload="init();">
-<div id="insta"><img src="./img/instaa.png" width="90" height="90"/></div>
+<div id="insta"><img src="./client/images/instaa.png" width="90" height="90"/></div>
 	<header>
   <h1>CAMaGRU</h1>
 
@@ -14,7 +14,7 @@
     <ul id="menu-demo2">
   <div id="test7">
     <div id="test7">
-    <li><a href="membre.php">Accueil</a>
+    <li><a href="index.php">Accueil</a>
   </li>
   <li><a href="#">Mon compte</a>
     <ul>
@@ -35,4 +35,10 @@
      <input type="submit" name="submit" value="Envoyer" />
 </form>
 </body>
+<footer>
+<div id="footim"> <img src="./client/images/logo.png"/></div>
+<div id="foot"> <p> Tii_Chaton.&copy;</p> </div>
+</footer>
+</body>
+</html>
 </html>

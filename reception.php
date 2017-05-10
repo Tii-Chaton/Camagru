@@ -11,6 +11,4 @@ function upload($index,$destination,$maxsize=FALSE,$extensions=FALSE)
    //Déplacement
      return move_uploaded_file($_FILES[$index]['tmp_name'],$destination);
 }
- 
 ?>
-
